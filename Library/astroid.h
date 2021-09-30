@@ -1,3 +1,10 @@
+//
+//  astroid.hpp
+//  Prog2
+//
+//  Created by Alexandra Khraltsova on 19.09.2021.
+//
+
 #ifndef astroid_hpp
 #define astroid_hpp
 #define _USE_MATH_DEFINES
@@ -52,6 +59,14 @@ namespace Prog2{
         if (t < 0 || t > 1.57)
             throw std::invalid_argument("Invalid angle");
     };
+    inline double SetAngle(){
+        std::cout << "Enter the angle: " << std::endl;
+        double t = Prog2::getDouble();
+        if (t == -1)
+            return -1;
+        Prog2::check_t(t);
+        return t;
+    }
 }
 
 #endif /* astroid_hpp */
